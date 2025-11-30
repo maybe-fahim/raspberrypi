@@ -129,7 +129,7 @@ export default function Page() {
               .slice(rowIdx * 7, rowIdx * 7 + 7)
               .map((day, idx) => {
                 if (!day)
-                  return <div key={idx} className="border w-full h-full"></div>;
+                  return <div key={idx} className="w-full h-full"></div>;
 
                 const isToday =
                   day === today.getDate() &&
@@ -144,7 +144,7 @@ export default function Page() {
                 return (
                   <div
                     key={idx}
-                    className={`border flex flex-col w-full h-full p-2 ${bgColor} rounded`}
+                    className={`flex flex-col w-full h-full p-2 ${bgColor} rounded`}
                   >
                     <div className="text-2xl font-bold text-gray-800">{day}</div>
                     <div className="text-lg mt-1 flex-1 overflow-y-auto break-words text-gray-800">
